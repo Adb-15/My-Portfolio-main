@@ -215,205 +215,74 @@
 </section>
 
 
-<title>Skills Section</title>
-  <style>
-    :root {
-      /* Light Mode Colors */
-      --bg-color: #fff;
-      --text-color: #2c3e50;
-      --muted-text-color: #666;
-      --button-bg: #3498db;
-      --button-text: #fff;
-      --card-bg: #f8f9fa;
-      --card-shadow: rgba(0,0,0,0.1);
-      --skill-bar-bg: #dcdde1;
-      --skill-fill-bg: #3498db;
-      --skill-percent-color: #3498db;
-    }
+<!-- Skills -->
+<section id="skills" style="padding: 40px 0;">
+    <div class="container">
+        <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Constantly Learning</span></h6>
+        <h2 class="section-heading text-center mb-3">Current Tech Stack</h2>
+        <p class="text-center muted-text mb-5">These are the technologies I'm currently learning and skillfully leveling up on:</p>
+        
+        <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 skills-container" data-aos="fade-up" data-aos-delay="200">
 
-    body.dark {
-      /* Dark Mode Colors */
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --muted-text-color: #bbbbbb;
-      --button-bg: #ffa726;
-      --button-text: #121212;
-      --card-bg: #1e1e1e;
-      --card-shadow: rgba(255 255 255 / 0.1);
-      --skill-bar-bg: #333333;
-      --skill-fill-bg: #ffa726;
-      --skill-percent-color: #ffa726;
-    }
+            <!-- Skill Item -->
+            <div class="col">
+                <div class="skill-item">
+                    <div class="skill-name">Java <span class="skill-percent">40%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--bg-color);
-      margin: 20px;
-      color: var(--text-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+            <div class="col">
+                <div class="skill-item">
+                    <div class="skill-name">C/C++ <span class="skill-percent">60%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
 
-    /* Toggle Button */
-    .toggle-container {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .toggle-button {
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      border: none;
-      padding: 10px 25px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .toggle-button:hover {
-      opacity: 0.85;
-    }
+            <div class="col">
+                <div class="skill-item">
+                    <div class="skill-name">Python <span class="skill-percent">10%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 10%;"></div>
+                    </div>
+                </div>
+            </div>
 
-    #skills {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+            <div class="col">
+                <div class="skill-item">
+                    <div class="skill-name">HTML <span class="skill-percent">35%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 35%;"></div>
+                    </div>
+                </div>
+            </div>
 
-    #skills h6 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+            <div class="col">
+                <div class="skill-item">
+                    <div class="skill-name">CSS <span class="skill-percent">30%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+            </div>
 
-    #skills h6 .theme-button {
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      padding: 5px 15px;
-      border-radius: 15px;
-      font-size: 0.9rem;
-    }
+            <div class="col">
+                <div class="skill-item">
+                    <div class="skill-name">Kali Linux <span class="skill-percent">20%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
 
-    #skills h2 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    #skills p {
-      text-align: center;
-      color: var(--muted-text-color);
-      margin-bottom: 40px;
-    }
-
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 25px;
-    }
-
-    .skill-item {
-      background: var(--card-bg);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 1px 4px var(--card-shadow);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .skill-name {
-      font-weight: 600;
-      font-size: 1.2rem;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      color: var(--text-color);
-    }
-
-    .skill-percent {
-      font-weight: 700;
-      color: var(--skill-percent-color);
-    }
-
-    .skill-bar {
-      background: var(--skill-bar-bg);
-      border-radius: 10px;
-      height: 12px;
-      overflow: hidden;
-    }
-
-    .skill-fill {
-      height: 100%;
-      background: var(--skill-fill-bg);
-      border-radius: 10px 0 0 10px;
-      transition: width 0.5s ease-in-out;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="toggle-container">
-    <button id="mode-toggle" class="toggle-button">Switch to Dark Mode</button>
-  </div>
-
-  <section id="skills">
-    <h6><span class="theme-button">Constantly Learning</span></h6>
-    <h2>Current Tech Stack</h2>
-    <p>These are the technologies I'm currently learning and skillfully leveling up on:</p>
-
-    <div class="skills-container">
-
-      <div class="skill-item">
-        <div class="skill-name">Java <span class="skill-percent">40%</span></div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 40%;"></div>
         </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-name">C/C++ <span class="skill-percent">60%</span></div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 60%;"></div>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-name">Python <span class="skill-percent">10%</span></div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 10%;"></div>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-name">HTML <span class="skill-percent">35%</span></div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 35%;"></div>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-name">CSS <span class="skill-percent">30%</span></div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 30%;"></div>
-        </div>
-      </div>
-
-      <div class="skill-item">
-        <div class="skill-name">Kali Linux <span class="skill-percent">20%</span></div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 20%;"></div>
-        </div>
-      </div>
-
     </div>
-  </section>
+</section>
 
-  <script>
-    const toggleBtn = document.getElementById('mode-toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if(document.body.classList.contains('dark')) {
-        toggleBtn.textContent = 'Switch to Light Mode';
-      } else {
-        toggleBtn.textContent = 'Switch to Dark Mode';
-      }
-    });
-  </script>
 
 
     <!-- Tools -->
